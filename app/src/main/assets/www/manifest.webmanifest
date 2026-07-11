@@ -1,0 +1,14 @@
+{
+  "name": "股票涨跌监控",
+  "short_name": "股监",
+  "description": "实时盯盘，涨跌幅阈值报警",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0e1116",
+  "theme_color": "#0e1116",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

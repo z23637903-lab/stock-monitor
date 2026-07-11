@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
+  <rect width="192" height="192" rx="40" fill="#0e1116"/>
+  <rect x="24" y="24" width="144" height="144" rx="24" fill="#161b22" stroke="#2a3240" stroke-width="3"/>
+  <polyline points="40,130 72,96 100,112 132,64 152,72" fill="none" stroke="#ef4444" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="40,150 72,150 100,150 132,150 152,150" fill="none" stroke="#2a3240" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="132" cy="64" r="9" fill="#ef4444"/>
+  <polyline points="40,150 72,150 100,150 132,150 152,150" fill="none" stroke="#22c55e" stroke-width="6" stroke-linecap="round" opacity="0.0"/>
+  <text x="96" y="172" font-family="sans-serif" font-size="26" fill="#8b98a9" text-anchor="middle">股监</text>
+</svg>

@@ -1,0 +1,15 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- 金色上升折线 + 箭头，居中安全区 -->
+    <group android:translateX="30" android:translateY="34">
+        <path android:fillColor="#e8c252"
+            android:pathData="M6,44 L22,28 L34,36 L48,16 L54,20 L54,8 L40,8 Z" />
+        <path android:fillColor="#e8c252"
+            android:pathData="M6,44 L22,28 L34,36 L48,16"
+            android:strokeColor="#e8c252" android:strokeWidth="3"
+            android:strokeLineCap="round" android:strokeLineJoin="round" />
+    </group>
+</vector>
