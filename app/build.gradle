@@ -16,31 +16,15 @@ android {
     }
 
     // 签名：若 CI 注入了 KEYSTORE_PATH 等环境变量则用之；否则回退到 debug keystore（本地/未签名出包用）
-    signingConfigs {
+        buildTypes {
         release {
-            def ksPath = System.getenv('KEYSTORE_PATH')
-            if (ksPath != null && file(ksPath).exists()) {
-                storeFile file(ksPath)
-                storePassword System.getenv('KEYSTORE_PASSWORD')
-                keyAlias System.getenv('KEY_ALIAS')
-                keyPassword System.getenv('KEY_PASSWORD')
-            } else {
-                def d = file(System.getProperty('user.home') + '/.android/debug.keystore')
-                storeFile d
-                storePassword 'android'
-                keyAlias 'androiddebugkey'
-                keyPassword 'android'
-            }
-        }
-    }
-
-    buildTypes {
-        release {
-            signingConfig signingConfigs.release
+            // 用 debug 签名出包，保证无密钥也能本地/CI 编译成功；需要正式签名再配 KEYSTORE
+            signingConfig signingConfigs.debug
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
