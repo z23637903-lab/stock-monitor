@@ -27,11 +27,14 @@ jobs:
           yes | sdkmanager --licenses || true
           sdkmanager "platforms;android-34" "build-tools;34.0.0"
 
+      - name: Install Gradle 8.6
+        run: |
+          wget -q https://services.gradle.org/distributions/gradle-8.6-bin.zip -O /tmp/gradle.zip
+          unzip -q /tmp/gradle.zip -d /opt
+          echo "/opt/gradle-8.6/bin" >> $GITHUB_PATH
+
       - name: Build release APK
-        uses: gradle/gradle-build-action@v3
-        with:
-          gradle-version: 8.6
-          arguments: assembleRelease
+        run: gradle assembleRelease
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
